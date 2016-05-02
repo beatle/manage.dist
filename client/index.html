@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
-    <title ng-bind="App.Page.title()"> </title>
+    <title ng-bind="App.Page.title() "> </title>
     <meta name="description" content="dashboard, recruiter, client">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -27,9 +27,9 @@
     'app-aside-dock':App.app.settings.asideDock,
     'container':App.app.settings.container      }" class="app">
       <!--<header>-->
-        <navbar class="app-header navbar"></navbar> <!--<div ng-include="'html/blocks/header.html'" class="app-header navbar"></div>-->
+        <navbar ng-show="App.OAuth.isAuthenticated()" class="app-header navbar"></navbar> <!--<div ng-include="'html/blocks/header.html'" class="app-header navbar"></div>-->
       <!--</header>-->
-      <aside ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
+      <aside ng-show="App.OAuth.isAuthenticated()"  ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
       <content>
         <div class="app-content">
           <div ui-butterbar=""></div>
@@ -70,8 +70,8 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <script src="app/vendor.b8d89d12.js"></script>
-    <script src="app/app.7eae47fc.js"></script>
+    <script src="app/vendor.abbe79ad.js"></script>
+    <script src="app/app.69c608d9.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
