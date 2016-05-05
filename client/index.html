@@ -27,9 +27,9 @@
     'app-aside-dock':App.app.settings.asideDock,
     'container':App.app.settings.container      }" class="app">
       <!--<header>-->
-        <navbar ng-show="App.OAuth.isAuthenticated()" class="app-header navbar"></navbar> <!--<div ng-include="'html/blocks/header.html'" class="app-header navbar"></div>-->
+        <navbar  class="app-header navbar"></navbar> <!--<div ng-include="'html/blocks/header.html'" class="app-header navbar"></div>-->
       <!--</header>-->
-      <aside ng-show="App.OAuth.isAuthenticated()"  ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
+      <aside  ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
       <content>
         <div class="app-content">
           <div ui-butterbar=""></div>
@@ -71,7 +71,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <script src="app/vendor.abbe79ad.js"></script>
-    <script src="app/app.f01c52a4.js"></script>
+    <script src="app/app.d6570ea1.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
