@@ -1,7 +1,7 @@
 'use strict';
 
 exports = module.exports = {
-  QUARC_API: 'http://api.beatleanalytics.com',
+  QUARC_API: 'http://api.beatleanalytics.com/api',
   OAUTH_URL: 'http://api.beatleanalytics.com',
   PARTNER_OAUTH_API: 'https://qapi.quezx.com/applications/partner/api',
   ACCOUNTS: '//accounts.quezx.com',
