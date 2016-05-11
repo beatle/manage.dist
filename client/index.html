@@ -20,34 +20,15 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
     <div id="app" ng-class="{
     'app-header-fixed':true,
     'app-aside-fixed':true,
     'app-aside-folded':App.app.settings.asideFolded,
     'app-aside-dock':App.app.settings.asideDock,
-    'container':App.app.settings.container      }" class="app">
-      <!--<header>-->
-        <navbar  class="app-header navbar"></navbar> <!--<div ng-include="'html/blocks/header.html'" class="app-header navbar"></div>-->
-      <!--</header>-->
-      <aside  ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
-      <content>
-        <div class="app-content">
-          <div ui-butterbar=""></div>
-          <a href="" ui-toggle-class="off-screen" data-target=".app-aside" class="off-screen-toggle hide"></a>
-          <div class="app-content-body">
-            <div class="hbox">
+    'container':App.app.settings.container      }" class="app" >
 
-              <div ng-if="App.showNavJobs()" class="col w">
-                <!--<div class="wrapper b-b bg">-->
-                  <!--<a ui-sref="app.mail.compose" class="btn btn-sm btn-danger w-xs font-bold" href="#/app/mail/compose">Manage JD</a>-->
-                <!--</div>-->
-                <navigation-jobs></navigation-jobs>
-              </div>
-              <div ui-view class="col"></div>
-            </div>
-          </div>
-      </div>
-      </content>
+       <div ui-view></div>
     </div>
     <!--<div ng-include="'html/blocks/aside.html'" ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs {{App.app.settings.asideColor}}"></div>-->
 
@@ -71,7 +52,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <script src="app/vendor.abbe79ad.js"></script>
-    <script src="app/app.5f718aa8.js"></script>
+    <script src="app/app.938d3af5.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
