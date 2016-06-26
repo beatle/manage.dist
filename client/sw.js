@@ -16,7 +16,7 @@ self.addEventListener('push', event => {
       };
 
       // Expect DOMException Error
-      return fetch(`${BNOTIFY_SERVER}/api/notifications/fetch/${endpoint}`)
+      return fetch(`${BNOTIFY_SERVER}/api/open/notifications/fetch/${endpoint}`)
         .then(res => {
           res.json()
             .then(payload => {
