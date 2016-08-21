@@ -1,5 +1,7 @@
 (function (angular) {
   'use strict';
+
+  var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
   angular.module('scrollable-table', [])
     .directive('scrollableTable', ['$timeout', '$q', '$parse', function ($timeout, $q, $parse) {
       return {
@@ -140,7 +142,7 @@
               el.css("width", headerWidth);
               if (!title) {
                 // ordinary column(not sortableHeader) has box child div element that contained title string.
-                title = el.find(".title .ng-scope").html() || el.find(".box").html();
+                title = el.find(".title .ng-scope").text() || el.find(".box").text();
               }
               el.attr("title", title.trim());
             });
@@ -162,8 +164,9 @@
           $scope.asc = !$attrs.hasOwnProperty("desc");
           $scope.sortAttr = $attrs.sortAttr;
 
+          var headerElementToFakeScroll = isFirefox ? "thead" : "thead th .th-inner";
           $element.find(".scrollArea").scroll(function (event) {
-            $element.find("thead th .th-inner").css('margin-left', 0 - event.target.scrollLeft);
+            $element.find(headerElementToFakeScroll).css('margin-left', 0 - event.target.scrollLeft);
           });
 
           $scope.$on("renderScrollableTable", function() {

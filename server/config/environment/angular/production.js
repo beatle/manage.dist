@@ -2,7 +2,6 @@
 
 exports = module.exports = {
   QUARC_API: 'https://api.beatleanalytics.com/api',
-  BEATLE: 'https://manage.beatleanalytics.com/#',
   OAUTH_URL: 'https://api.beatleanalytics.com',
   PARTNER_OAUTH_API: 'https://qapi.quezx.com/applications/partner/api',
   ACCOUNTS: '//accounts.quezx.com',

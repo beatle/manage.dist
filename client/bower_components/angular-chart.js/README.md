@@ -2,7 +2,7 @@
 
 [![Bower version](https://badge.fury.io/bo/angular-chart.js.svg)](http://badge.fury.io/bo/angular-chart.js)
 [![npm version](https://badge.fury.io/js/angular-chart.js.svg)](http://badge.fury.io/js/angular-chart.js)
-[![Build Status](https://travis-ci.org/jtblin/angular-chart.js.png)](https://travis-ci.org/jtblin/angular-chart.js)
+[![Build Status](https://travis-ci.org/jtblin/angular-chart.js.svg?branch=master)](https://travis-ci.org/jtblin/angular-chart.js)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/6aa5ba92f4984a24874e5976ee541623)](https://www.codacy.com/app/jtblin/angular-chart-js)
 [![Code Coverage](https://d3s6mut3hikguw.cloudfront.net/github/jtblin/angular-chart.js/badges/coverage.svg)](https://codeclimate.com/github/jtblin/angular-chart.js)
 [![npm](https://img.shields.io/npm/dm/angular-chart.js.svg?maxAge=2592000)](https://www.npmjs.com/package/angular-chart.js)
@@ -14,9 +14,7 @@ script and options.
 
 # Installation
 
-## Chart.js 2.0 and 1.0.0-beta branch
-
-This is the `1.0.0-beta` branch which requires Chart.js 2.x version. Following semantic versioning,
+This is the `1.x` branch which requires Chart.js 2.x version. Following semantic versioning,
 there are numerous **breaking changes** since 0.x, notably:
 
 * all options now need to use the `chart-` prefix
@@ -36,12 +34,23 @@ but must be set via standard options e.g. `ChartJsProvider.setOptions({ responsi
 
 ### cdn
 
-**CND is not available anymore until we merge into master**
-
     //cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js
 
 ### bower
 
+Bower support has been dropped in Chart.js since version 2.2.0 but you can still use it with Bower thanks to bower-npm-resolver if needed but using npm is preferred.
+
+First, add the resolver in your .bowerrc file:
+
+    {
+      "resolvers": [
+        "bower-npm-resolver"
+      ]
+    }
+
+Then:
+
+    npm install -g bower-npm-resolver
     bower install --save angular-chart.js
 
 ### manually
@@ -211,7 +220,14 @@ and the line ```document.defaultView = window;```, but there still may be errors
  
 Please check if issue exists first, otherwise open issue in [github](https://github.com/jtblin/angular-chart.js/issues). 
 **Ensure you add a link to a plunker, jsbin, or equivalent.** 
+
 Here is a [jsbin template](http://jsbin.com/rodunob/edit?html,js,output) for convenience.
+
+# v0.x - Chart.js v1.x - deprecated
+
+This is the deprecated version of angular-chart.js that uses the v1.x version of Chart.js.
+If you want to use this version, please checkout the 
+[chartjs-1.x branch](https://github.com/jtblin/angular-chart.js/tree/chartjs-1.x)
 
 # Contributing
  
