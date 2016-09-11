@@ -7,14 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <base href="/">
-    <title ng-bind="App.Page.title() "> </title>
+    <title ng-bind="App.Page.title()"> </title>
     <link rel="manifest" href="manifest.json">
     <meta name="description" content="dashboard, recruiter, client">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script>if(location.protocol=== "http:" && location.host === "manage.beatleanalytics.com"){ location = window.location.href.replace(/http/,'https') }</script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="app/vendor.af780dfc.css">
-    <link rel="stylesheet" href="app/app.8dd811e0.css">
+    <link rel="stylesheet" href="app/app.c9d8d591.css">
   </head>
   <body ng-app="uiGenApp">
     <img src="assets/images/bg1.4ab1b594.jpg" ng-hide="App.app.settings.container" style="
@@ -28,13 +28,22 @@
     <!-- Add your site or application content here -->
 
     <div id="app" ng-class="{
-    'app-header-fixed':true,
-    'app-aside-fixed':true,
-    'app-aside-folded':App.app.settings.asideFolded,
-    'app-aside-dock':App.app.settings.asideDock,
-    'container':App.app.settings.container      }" class="app" >
+    'app-header-fixed': App.app.settings.headerFixed,
+    'app-aside-fixed': app.settings.asideFixed,
+    'app-aside-folded':app.settings.asideFolded,
+    'app-aside-dock':app.settings.asideDock,
+    'container':app.settings.container}" class="app" >
+      <navbar class="app-header navbar" ng-hide="App.app.settings.headerHide"></navbar>
+      <aside ng-hide="App.app.settings.asideHide" ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
+      <content>
+        <div class="app-content">
+          <div ui-butterbar=""></div><a href="" ui-toggle-class="off-screen" data-target=".app-aside" class="off-screen-toggle hide"></a>
+          <div class="app-content-body">
+            <div ui-view></div>
+          </div>
+        </div>
+      </content>
 
-       <div ui-view></div>
     </div>
     <!--<div ng-include="'html/blocks/aside.html'" ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs {{App.app.settings.asideColor}}"></div>-->
 
@@ -58,7 +67,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <script src="app/vendor.3b1dc0a2.js"></script>
-    <script src="app/app.930f43b7.js"></script>
+    <script src="app/app.eaf52e28.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
