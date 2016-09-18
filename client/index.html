@@ -14,42 +14,25 @@
     <script>if(location.protocol=== "http:" && location.host === "manage.beatleanalytics.com"){ location = window.location.href.replace(/http/,'https') }</script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="app/vendor.af780dfc.css">
-    <link rel="stylesheet" href="app/app.c9d8d591.css">
+    <link rel="stylesheet" href="app/app.97cbad87.css">
   </head>
   <body ng-app="uiGenApp">
-    <img src="assets/images/bg1.4ab1b594.jpg" ng-hide="App.app.settings.container" style="
-      position: fixed;
-      opacity: 0.2;
-  ">
+
     <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
 
-    <div id="app" ng-class="{
-    'app-header-fixed': App.app.settings.headerFixed,
-    'app-aside-fixed': app.settings.asideFixed,
+    <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed,
+    'app-aside-fixed':app.settings.asideFixed,
     'app-aside-folded':app.settings.asideFolded,
     'app-aside-dock':app.settings.asideDock,
-    'container':app.settings.container}" class="app" >
-      <navbar class="app-header navbar" ng-hide="App.app.settings.headerHide"></navbar>
-      <aside ng-hide="App.app.settings.asideHide" ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs bg-gd-dk {{App.app.settings.asideColor}}"></aside>
-      <content>
-        <div class="app-content">
-          <div ui-butterbar=""></div><a href="" ui-toggle-class="off-screen" data-target=".app-aside" class="off-screen-toggle hide"></a>
-          <div class="app-content-body">
-            <div ui-view></div>
-          </div>
-        </div>
-      </content>
-
+    'container':app.settings.container}"  ui-view="" >
+      <!-- navbar-->
+      <div data-ng-include=" 'components/header.html' " class="app-header navbar"></div>
+      <!-- / navbar-->
     </div>
-    <!--<div ng-include="'html/blocks/aside.html'" ng-class="{    'off-screen': App.app.settings.offScreen,  }" class="app-aside hidden-xs {{App.app.settings.asideColor}}"></div>-->
-
-    <!--<navbar></navbar>-->
-    <!--<div ui-view=""></div>-->
-    <!--<footer></footer>-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -66,8 +49,8 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <script src="app/vendor.3b1dc0a2.js"></script>
-    <script src="app/app.61d77e97.js"></script>
+    <script src="app/vendor.a41768c9.js"></script>
+    <script src="app/app.6f0da55b.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
