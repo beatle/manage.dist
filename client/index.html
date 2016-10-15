@@ -24,13 +24,13 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed,
-    'app-aside-fixed':app.settings.asideFixed,
-    'app-aside-folded':app.settings.asideFolded,
-    'app-aside-dock':app.settings.asideDock,
-    'container':app.settings.container}"  ui-view="" >
+    <div class="app" id="app" ng-class="{'app-header-fixed': App.app.settings.headerFixed,
+    'app-aside-fixed': App.app.settings.asideFixed,
+    'app-aside-folded': App.app.settings.asideFolded,
+    'app-aside-dock': App.app.settings.asideDock,
+    'container': App.app.settings.container}"  ui-view="" >
       <!-- navbar-->
-      <div data-ng-include=" 'components/header.html' " class="app-header navbar"></div>
+      <div data-ng-include="'components/header.html'" class="app-header navbar"></div>
       <!-- / navbar-->
     </div>
 
@@ -50,7 +50,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <script src="app/vendor.aa0b42fa.js"></script>
-    <script src="app/app.860f2117.js"></script>
+    <script src="app/app.f208edd0.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
