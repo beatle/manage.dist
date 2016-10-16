@@ -14,7 +14,7 @@
     <script>if(location.protocol=== "http:" && location.host === "manage.beatleanalytics.com"){ location = window.location.href.replace(/http/,'https') }</script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="app/vendor.af780dfc.css">
-    <link rel="stylesheet" href="app/app.b6097e48.css">
+    <link rel="stylesheet" href="app/app.4484498a.css">
   </head>
   <body ng-app="uiGenApp">
 
@@ -24,13 +24,13 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed,
-    'app-aside-fixed':app.settings.asideFixed,
-    'app-aside-folded':app.settings.asideFolded,
-    'app-aside-dock':app.settings.asideDock,
-    'container':app.settings.container}"  ui-view="" >
+    <div class="app" id="app" ng-class="{'app-header-fixed': App.app.settings.headerFixed,
+    'app-aside-fixed': App.app.settings.asideFixed,
+    'app-aside-folded': App.app.settings.asideFolded,
+    'app-aside-dock': App.app.settings.asideDock,
+    'container': App.app.settings.container}"  ui-view="" >
       <!-- navbar-->
-      <div data-ng-include=" 'components/header.html' " class="app-header navbar"></div>
+      <div data-ng-include="'components/header.html'" class="app-header navbar"></div>
       <!-- / navbar-->
     </div>
 
@@ -49,8 +49,8 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    <script src="app/vendor.374ae8ee.js"></script>
-    <script src="app/app.52cb8ceb.js"></script>
+    <script src="app/vendor.aa0b42fa.js"></script>
+    <script src="app/app.d8f33e8e.js"></script>
 
     <script type="text/javascript">
     if(localStorage.userinfo ){
